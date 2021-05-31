@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device", initial-scale=1.0>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c151b27f34.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<title>Chanakya | Academics</title>	
+</head>
+<body>
+	
+
+<!--navbar-->
+
+
+
+
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<header class="text-gray-600 body-font" style="position: sticky; top: 0;  background-color: white; box-shadow:  0 4px 4px 0 rgba(0,0,0,.2)">
+<!--<div class="min-h-0" >-->
+  <!--<div class="antialiased bg-gray-100 dark-mode:bg-gray-900"  style="background-color: wheat;"> 
+  <div class="w-full text-gray-700 bg-white dark-mode:text-gray-200 dark-mode:bg-gray-800">-->
+    <div x-data="{ open: true }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+      <div class="flex flex-row items-center justify-between p-4">
+        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="index.html">
+      <img src="images/logo-footer.png" alt="logo" style="height: 50px;">
+      <!--<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>-->
+      <span class="ml-3 text-xl text-style" style="color: #dc7d1d;
+  font-size: 2rem; font-family: Arial, Helvetica, sans-serif; "><b>CHANAKYA</b></span>
+    </a>
+        <button class="rounded-lg md:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
+          <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+            <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+            <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>
+        </button>
+      </div>
+      <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row">
+        <a class="px-4 py-2 mt-2 text-sm font-bold bg-transparent rounded-lg md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="index.html">HOME</a>
+        <a class="px-4 py-2 mt-2 text-sm font-bold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="academics.html">ACADEMICS</a>
+        <a class="px-4 py-2 mt-2 text-sm font-bold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="about.html">ABOUT US</a>
+        <a class="px-4 py-2 mt-2 text-sm font-bold bg-transparent rounded-lg  md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="contacts.html">CONTACT US</a>
+        <div @click.away="open = false" class="relative" x-data="{ open: false }">
+          <button @click="open = !open" class="flex flex-row text-gray-900 bg-yellow-500 items-center w-full px-4 py-2 mt-2 text-sm font-bold text-left bg-transparent rounded-lg md:w-auto md:inline md:mt-0 md:ml-4 hover:text-white focus:text-gray-900 hover:bg-yellow-500 focus:bg-yellow-500 focus:outline-none focus:shadow-outline bg-yellow-500">
+            <span>More</span>
+            <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+          </button>
+          <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full md:max-w-screen-sm md:w-screen mt-2 origin-top-right">
+            <div class="px-2 pt-2 pb-4 bg-white rounded-md shadow-lg dark-mode:bg-gray-700">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+
+
+
+
+                <!--  Enable OUR TEAM in navbar. -->
+
+
+
+
+                <!--
+                <a class="flex flex row items-start rounded-lg bg-transparent p-2 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="ourteam.html">
+                  <div class="bg-teal-500 text-white rounded-lg p-3">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="md:h-6 md:w-6 h-4 w-4"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                  </div>
+                  <div class="ml-3">
+                    <p class="font-semibold">OUR TEAM</p>
+                    <p  class="text-sm">Easy customization</p>
+                  </div>
+                </a>-->
+
+                <a class="flex flex row items-start rounded-lg bg-transparent p-2   hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="careers.html">
+                  <div class="bg-teal-500 text-white rounded-lg p-3">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="md:h-6 md:w-6 h-4 w-4"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                  </div>
+                  <div class="ml-3">
+                    <p href="careers.html" class="font-semibold">CAREERS</p>
+                    <p class="text-sm">Grab your oppurtinity.</p>
+                  </div>
+                </a>
+
+                <!--<a class="flex flex row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">
+                  <div class="bg-teal-500 text-white rounded-lg p-3">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" class="md:h-6 md:w-6 h-4 w-4"><path d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                  </div>
+                  <div class="ml-3">
+                    <p class="font-semibold"></p>
+                    <p class="text-sm">Take a look at your statistics</p>
+                  </div>
+                </a> -->
+              </div>
+            </div>
+          </div>
+        </div>    
+      </nav>
+    </div>
+  </div>
+</div>
+</div>
+</header>
+
+
+
+
+
+<!--COURSES WE OFFERING-->
+
+
+
+<section class="text-gray-600 body-font"  style="background: #111827;">
+  <div class="container px-2 py-10 mx-auto" >
+    <div class="flex flex-col text-center w-full mb-0">
+      <!--<h2 class="text-xs text-yellow-500 tracking-widest font-medium title-font mb-1">ROOF PARTY POLAROID</h2>-->
+      <h1 class="sm:text-3xl text-2xl font-medium title-font mb-0 text-gray-900"  style="color:white;"><b>COURSES</b> </h1>
+      <!--<p class="lg:w-2/3 mx-auto leading-relaxed text-base">choose wisely</p>-->
+    </div>
+    <!--<div class="flex flex-wrap">
+      <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+        <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">JEE</h2>
+        <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+        <a class="text-yellow-500 inline-flex items-center">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+        <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">NEET</h2>
+        <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+        <a class="text-yellow-500 inline-flex items-center">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+        <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">C MENTOR</h2>
+        <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+        <a class="text-yellow-500 inline-flex items-center">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+      <div class="xl:w-1/4 lg:w-1/2 md:w-full px-8 py-6 border-l-2 border-gray-200 border-opacity-60">
+        <h2 class="text-lg sm:text-xl text-gray-900 font-medium title-font mb-2">E-BOARDS</h2>
+        <p class="leading-relaxed text-base mb-4">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+        <a class="text-yellow-500 inline-flex items-center">Learn More
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </a>
+      </div>
+    </div>-->
+   <!-- <button class="flex mx-auto mt-16 text-white bg-yellow-500 border-0 py-2 px-8 focus:outline-none hover:bg-yellow-600 rounded text-lg">Button</button> -->
+  </div>
+</section>
+
+
+
+
+
+<!--JEE-->
+
+
+
+<section class="text-gray-600 body-font" style="background: #ffe14cb3">
+  <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col ">
+     
+    <img id="JEE" class="lg:w-2/6 md:w-3/6 w-5/6  mb-10 object-cover object-center rounded " alt="JEE"  src="images/JEE-removebg.png">
+    
+    <div class="text-center lg:w-4/5 w-full" style="text-align: justify;">
+      <h1  class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"    >JEE</h1>
+      
+      <p class="mb-8 leading-relaxed">The Joint Entrance Examination (JEE) is an engineering entrance assessment conducted for admission to various engineering colleges in India. It is constituted by two different examinations: the JEE Main and the JEE Advanced.<br><br>
+        The Joint Seat Allocation Authority (JoSAA) conducts the joint admission process for a total of 23 Indian Institute of Technology campuses, 31 National Institute of Technology campuses, 25 Indian Institute of Information Technology campuses and 19 other Government Funded Technical Institutes (GFTIs) based on the rank obtained by a student in JEE Mains and JEE Advanced.<br><br>
+        There are some institutes, such as the Indian Institutes of Science Education and Research (IISERs), the Indian Institute of Petroleum and Energy (IIPE), the Rajiv Gandhi Institute of Petroleum Technology (RGIPT), the Indian Institute of Space Science and Technology (IIST), and the Indian Institute of Science (IISc), which use the score obtained in the JEE Advanced examination as the basis for admission. These institutes do not participate in the post-examination counselling session (JoSAA). Any student who takes admission to an Indian Institute of Technology cannot appear for the JEE Advanced examination again, but the same is not the case with IISc, IISERs, RGIPT, IIPE and IIST since they have separate and exclusive counselling sessions.<br><br>
+        <b  class="text-yellow-600 text-2xl">JEE Main</b> <br>
+        JEE Main has two papers, Paper-I and Paper-II. Candidates may opt for either or both of them. Both papers contain multiple choice questions. Paper-I is for admission to B.E./B.Tech courses and is conducted in a Computer Based Test mode. Paper-II is for admission in B.Arch and B.Planning courses and will also be conducted in Computer Based Test mode except for one paper, namely the 'Drawing Test' which shall be conducted in Pen and Paper mode or offline mode. From January 2020 an additional Paper - III is being introduced for B.Planning courses separately.<br><br>
+        Due to the Covid-19 pandemic in 2020, JEE Main 2021 has a change in paper format and number of attempts. Now there will be 20 single choice questions and 10 numerical questions out of which only five numerical questions are to be attempted. The marking scheme is same as earlier i.e. for SCQs, +4 marks for correct answer and -1 marks for incorrect answer and 0 marks for not answered, and for numerical type questions, +4 marks for correct and 0 for incorrect.<br>
+        A new pattern consisting of 20+5 questions per subject was introduced in January 2020 with 20 single choice questions + 5 numerical type question. In single-choice questions 4 marks are awarded for correct answers and no marks are deducted from numerical type questions.<br><br>
+        Number of attempts are now increased to four saying that it would help students to not waste their next year if unfortunately they couldn't attend the papers due to board exams or if they get suffered by ongoing disease or any other.<br><br>
+        JEE Main, unlike JEE Advanced, has a fixed exam structure and is not subject to change every year. Till 2018 JEE exam, paper-1 is of three hours duration and consists of thirty single choice questions in each of the three subjects (physics, chemistry and maths). 4 marks are awarded for correct answers and 1 mark is deducted for incorrect answers.<br><br>
+        From 2013 to 2016, the marks obtained in the class XII school board examination used to be accorded a 40% weightage in deciding the JEE Main all India ranks.<br><br>
+
+        <b  class="text-yellow-600 text-2xl">JEE Advanced</b> <br>
+        The top students who take the JEE-Main qualify for the JEE-Advanced examination. In 2018, 224,000 students were allowed to take the JEE-Advanced, a number that had gone up from 220,000 in 2017 and 200,000 in 2016.<br><br>
+        The eligibility criteria for taking the JEE (Advanced) exam are:<br><br>
+        1. Candidates should rank among the top candidates in Paper-1 of JEE (Main), broken down per category. For example, for JEE (Advanced) 2019, the top 250,000 were eligible, but only 46.5% of those were open for all, the rest being reserved for special categories.<br>
+        2. Candidates should be less than 25 years of age, with five-year relaxation for SC, ST, and PwD candidates.<br>
+        3. Candidates can attempt examination at most two times in two consecutive years.<br>
+        4. Candidates should have qualified the Class XII Board Examination (or equivalent) in the previous year.<br>
+        5. Candidates should not have accepted admission in any of the IIT earlier.<br>
+
+
+        </p>
+      <!--<div class="flex justify-center">
+        <button class="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">Button</button>
+        <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+      </div>-->
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--NEET-->
+
+
+<section class="text-gray-600 body-font"  style="background: #1118272e;">
+  <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col" style="text-align: justify;">
+    <img id="NEET" class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"  alt="NEET" src="images/NEET-removebg.png">
+    <div class="text-center lg:w-4/5 w-full" style="text-align: justify;">
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"  >NEET</h1>
+      <p class="mb-8 leading-relaxed">The National Eligibility cum Entrance Test (Undergraduate) (or NEET (UG)), formerly the All India Pre-Medical Test (AIPMT), is an all India pre-medical entrance test for students who wish to pursue undergraduate medical (MBBS), dental (BDS) and equivalent AYUSH (BAMS, BUMS, BHMS, etc.) courses in government and private institutions in India and also, for those intending to pursue primary medical qualification abroad.<br><br>
+        The exam is conducted by National Testing Agency (NTA), which provides the results to the Directorate General of Health Services under Ministry of Health and Family Welfare and State Counselling Authorities for seat allocation.<br><br>
+        NEET-UG replaced the All India Pre Medical Test (AIPMT) and many other pre-medical exams conducted by states and various medical colleges. However, due to lawsuits being filed against the exam, it could not be held in 2014 and 2015.<br><br>
+        NEET-UG is a single entrance test for admissions to more than 66,000 MBBS and BDS seats across India in 2018.<br><br>
+        After the enactment of NMC Act 2019 in September 2019, NEET-UG became common all India entrance test for admissions to medical colleges in India including the All India Institutes of Medical Sciences (AIIMS) and Jawaharlal Institute of Postgraduate Medical Education & Research (JIPMER) which until then conducted separate entrances.<br><br>
+        There are a total of 180 questions asked in the exam, 45 questions each from Physics and Chemistry, 90 questions from Biology. Each correct response fetches 4 marks and each incorrect response gets -1 negative marking. The exam duration is 3 hours (180mins). The exam is of 720 marks (maximum marks).<br>
+
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!--C MENTOR-->
+
+
+
+
+<section class="text-gray-600 body-font"  style="background: #ffe14cb3">
+  <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col" style="text-align: justify;">
+    <img id="C-MENTOR" class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"  alt="CMENTOR" src="images/C-MENTOR-removebg.png">
+    <div class="text-center lg:w-4/5 w-full" style="text-align: justify;">
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"  >C-MENTOR</h1>
+      <p class="mb-8 leading-relaxed"> <b style="color: rgb(255, 183, 3);">C MENTOR Program</b> 
+      is an exclusive program which adopts thebest curriculum of CHANAKYA GROUP and shares its successformula to students of other like minded schools for theiracademic progress. Program is intended to strengthen Mathsand Science foundation for all students in 6th to 10th and crackcompetitive exams for 11th and 12th standard students. Thisprogram is targeted mainly at tier-2 and tier-3 cities and isoffered to selected schools which believe in providingaffordable additional support to their students.<br><br><br>
+
+      <b style="color: rgb(255, 183, 3);font-size: large;">Program Highlights:</b><br><br>
+      1. CHANAKYA KNOWLEDGE POOL is developed by in-house R&D team which will guide the students in managing time.<br>
+      2. A DEDICATED ACADEMIC CO-ORDINATOR to monitor the program and ensure its success.<br>
+      3. DE-STRESSED PREPARATION for ultimate success in CET, JEE Mains, Advanced, NEET, KVPY, Olympiads and more...<br>
+      4. C-Top TEACHER TRAINING PROGRAM to up-skill the faculty and also to ensure uniform subject delivery in classrooms across the program.<br>
+      5. Nationwide common test preparation and performance ANALYSIS to give students, insights into how to improve their performance and increase their chances of success.<br><br><br>
+
+      <b style="color: rgb(255, 183, 3);font-size: large;">Benefits of C Mentor:</b><br><br>
+      1. Best 360 degree education which compliments in class teaching.<br>
+      2. One solution for all additional academic support.<br>
+      3. Experiencing the unique teaching methodology.<br>
+      4. Disciplined and focused environment.<br>
+      5. Performance monitoring.<br>
+      6. C Mentor replaces all your expensive and unproductive private tuitions at affordable price.<br>
+      7. Time to time communication of your child's performance.<br>
+      8. Opportunity to bestow your child with one of the best academic curriculum.<br>
+
+     </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--E-BOARDS-->
+
+
+
+
+<section class="text-gray-600 body-font"  style="background: #1118272e;">
+  <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col" style="text-align: justify;">
+    <img id="E-BOARDS" class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"   alt="EBOARDS" src="images/EBOARDS-removebg.png">
+    <div class="text-center lg:w-4/5 w-full" style="text-align: justify;">
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900"  >E-BOARDS</h1>
+      <p class="mb-8 leading-relaxed">Complete your entire 12th board exam syllabus while sitting at your home and still getting all the benefits of not sitting at your home. E-Board Program is designed to facilitate students prepare well in time with the best mentors of various subjects with proper schedule provided to each student.
+        </p>
+    </div>
+  </div>
+</section>
+
+
+
+<!--FOOTER-->
+
+<footer class="text-gray-600 body-font footer" style=" background:  #111827" >
+  <div class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+    <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+      <a href="index.html" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+        <img src="images/logo-footer.png" alt="logo" style="height: 150px;"> 
+        <!--<svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full" viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>  -->
+        <span class="ml-3 text-xl"  style="color: #dc7d1d;font-size: 2rem;  font-family: Arial, Helvetica, sans-serif; "><b>CHANAKYA</b></span>
+          
+       </a>
+       <p class="mt-2 text-sm text-gray-500">     <!-- HEHE GOES LOGO STATEMENT-->    </p>
+    </div>
+    <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center" style="text-align: justify;">
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4" style="margin-left: 50px;">
+        <h2 class="title-font font-medium text-yellow-500 tracking-widest text-lg mb-3">QUICK LINKS</h2>
+        <div class="h-0.5 w-20 bg-yellow-500 rounded" style="width: 145px; margin-bottom: 10px;"></div>
+         <nav class="list-none mb-10">
+          <li>
+            <a href="index.html" class="text-white hover:text-yellow-300" style="cursor: pointer;">Home</a>
+          </li>
+          <li>
+            <a  href="academics.html" class="text-white hover:text-yellow-300" style="cursor: pointer;">Academics</a>
+          </li>
+          <li>
+            <a  href="ourteam.html" class="text-white hover:text-yellow-300" style="cursor: pointer;">Our Team</a>
+          </li>
+          <li>
+            <a href="careers.html" class="text-white hover:text-yellow-300" style="cursor: pointer;">Careers</a>
+          </li>
+          <li>
+            <a href="about.html" class="text-white hover:text-yellow-300">About Us</a>
+          </li>
+          <li>
+            <a  href="contacts.html" class="text-white hover:text-yellow-300" style="cursor: pointer;">Contact Us</a>
+          </li>
+
+        </nav>
+      </div> 
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4" style="margin-left: 30px;">
+        <h2 class="title-font font-medium text-yellow-500 tracking-widest text-lg mb-3" >COURSES</h2>
+        <div class="h-0.5 w-20 bg-yellow-500 rounded" style="width: 110px; margin-bottom: 10px;"></div>
+        <nav class="list-none mb-10">
+          <li>
+            <a  href="academics.html#JEE" class="text-white hover:text-yellow-300" style="cursor: pointer;">JEE (Main+Advanced)</a>
+          </li>
+          <li>
+            <a  href="academics.html#NEET" class="text-white hover:text-yellow-300" style="cursor: pointer;">NEET</a>
+          </li>
+          <li>
+            <a href="academics.html#C-MENTOR" class="text-white hover:text-yellow-300" style="cursor: pointer;">C-Mentor</a>
+          </li>
+          <li>
+            <a href="academics.html#E-BOARDS" class="text-white hover:text-yellow-300" style="cursor: pointer;">E-Boards</a>
+          </li>
+        </nav>
+      </div>
+      <!--<div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-yellow-500 tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">CATEGORIES</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+          </li>
+          <li>
+            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+          </li>
+        </nav>
+      </div> -->
+    </div>
+  </div>
+  <div class="bg-gray-100" style="background :#272729">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row ">
+      <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 Chanakya All rights reserved —
+        <a href="https://www.linkedin.com/in/bhupendra-jee-vishwakarma-3050a0211/" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@bhupendrajee</a>
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+        <a class="text-gray-500">
+          <svg  fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

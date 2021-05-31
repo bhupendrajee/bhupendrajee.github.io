@@ -1,0 +1,13 @@
+.text-xl {
+
+	color: #dc7d1d;
+	font-size: 2rem;
+}
+
+#header {
+
+	position: sticky;
+	top: 0;
+	background-color: white;
+	overflow: hidden;
+}
